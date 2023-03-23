@@ -1,11 +1,13 @@
+import { Route, Routes } from "react-router-dom";
 import LoginTemplete from "./components/LoginTemplete";
-import Login from "./components/Login";
+import JoinTemplete from "./components/JoinTemplete";
 
 const App = () => {
   return (
-    <LoginTemplete>
-      <Login />
-    </LoginTemplete>
+    <Routes>
+      <Route path="/" element={<LoginTemplete />} />
+      <Route path="/join" element={<JoinTemplete />} />
+    </Routes>
   );
 };
 

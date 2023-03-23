@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const StyledForm = styled.div`
   h3 {
@@ -18,7 +19,7 @@ const StyledInput = styled.input`
   outline: none;
 `;
 
-const StyledButton = styled.button`
+const StyledLoginButton = styled.button`
   margin-top: 1.5rem;
   border: none;
   border-radius: 4px;
@@ -34,6 +35,20 @@ const StyledButton = styled.button`
   }
 `;
 
+const StyledJoinButton = styled.button`
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: none;
+  display: flex;
+  font-size: 1rem;
+  color: black;
+  margin-left: auto;
+  &:hover {
+    background: #b58595;
+  }
+`;
+
 const Login = () => {
   return (
     <StyledForm>
@@ -44,7 +59,10 @@ const Login = () => {
         name="password"
         placeholder="비밀번호"
       ></StyledInput>
-      <StyledButton>로그인</StyledButton>
+      <StyledLoginButton>로그인</StyledLoginButton>
+      <Link to="/join">
+        <StyledJoinButton>회원가입</StyledJoinButton>
+      </Link>
     </StyledForm>
   );
 };

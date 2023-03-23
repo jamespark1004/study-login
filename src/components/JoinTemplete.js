@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Login from "./Login";
+import Join from "./Join";
 
 const StyledTemplete = styled.div`
   width: 512px;
@@ -20,13 +20,13 @@ const StyledTitle = styled.div`
   justify-content: center;
 `;
 
-const LoginTemplete = () => {
+const JoinTemplete = () => {
   return (
     <StyledTemplete>
-      <StyledTitle>로그인 페이지</StyledTitle>
-      <Login />
+      <StyledTitle>회원가입 페이지</StyledTitle>
+      <Join />
     </StyledTemplete>
   );
 };
 
-export default LoginTemplete;
+export default JoinTemplete;
